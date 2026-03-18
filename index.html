@@ -9,6 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -25,6 +29,18 @@ body {
     position: fixed;
     padding: 20px;
     text-align: center;
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .profile-img {
@@ -51,10 +67,12 @@ body {
     color: #d1d5db;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 .links a:hover {
     color: white;
+    transform: translateX(5px);
 }
 
 /* Navigation */
@@ -82,6 +100,11 @@ body {
 
 section {
     margin-bottom: 60px;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
 }
 
 h1 {
@@ -96,6 +119,18 @@ h2 {
 
 ul {
     line-height: 1.8;
+}
+
+/* Fade animation */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
 </head>
@@ -127,7 +162,7 @@ ul {
 <!-- Main Content -->
 <div class="main">
 
-<section id="about">
+<section id="about" class="fade">
     <h1>About</h1>
     <p>
         I am a researcher and academician specializing in Internet of Things (IoT),
@@ -137,7 +172,7 @@ ul {
     </p>
 </section>
 
-<section id="research">
+<section id="research" class="fade">
     <h2>Research Interests</h2>
     <ul>
         <li>Internet of Things (IoT)</li>
@@ -147,12 +182,28 @@ ul {
     </ul>
 </section>
 
-<section id="contact">
+<section id="contact" class="fade">
     <h2>Contact</h2>
     <p>Email: firojgazi123@gmail.com</p>
 </section>
 
 </div>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+faders.forEach(fade => {
+    observer.observe(fade);
+});
+</script>
 
 </body>
 </html>
