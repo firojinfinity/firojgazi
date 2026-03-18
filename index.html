@@ -22,9 +22,25 @@ body {
     position: fixed;
     padding: 30px;
     animation: slideIn 1s ease;
+    text-align: center;
 }
 
-.sidebar h2 { margin-bottom: 10px; }
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #2563eb;
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+}
+
+.sidebar h2 { margin-bottom: 5px; }
 .sidebar p { font-size: 14px; color: #9ca3af; }
 
 .links a {
@@ -133,6 +149,9 @@ section { margin-bottom: 60px; }
 
 <!-- SIDEBAR -->
 <div class="sidebar">
+
+    <img src="profile.jpg" class="profile-img">
+
     <h2>Dr. Firoj Gazi</h2>
     <p>Assistant Professor<br>SRM University AP</p>
 
@@ -151,7 +170,7 @@ section { margin-bottom: 60px; }
 <h1>About Me</h1>
 <p>
 Assistant Professor specializing in IoT, Edge AI, underwater communication, and intelligent systems.
-Actively working on real-world deployments and interdisciplinary research combining AI and communication systems.
+Focused on real-world deployment, interdisciplinary research, and advanced communication systems.
 </p>
 </section>
 
@@ -184,104 +203,26 @@ Actively working on real-world deployments and interdisciplinary research combin
 
 <h2>Patents</h2>
 
-<div class="pub-card">
-<b>Smart Indoor Localization System</b><br>
-Application No: 202441067500<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>ATTENDEDGE: Smart Attendance System</b><br>
-Application No: 202441077282<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>Medical Image Analysis using FEELGANs</b><br>
-Application No: 202441083307<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>Retinal Disease Detection System</b><br>
-Application No: 202441066371<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>AI-based Air Quality Monitoring System</b><br>
-Application No: 202541000511<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>Underwater Data Transmission using TinyML</b><br>
-Application No: 202541016043<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>TinyML Object Detection Test-bed</b><br>
-Application No: 202541087210<br>
-<span class="badge">Filed</span>
-</div>
+<div class="pub-card"><b>Smart Indoor Localization System</b><br>Application No: 202441067500<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>ATTENDEDGE: Smart Attendance System</b><br>Application No: 202441077282<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>Medical Image Analysis using FEELGANs</b><br>Application No: 202441083307<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>Retinal Disease Detection System</b><br>Application No: 202441066371<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>AI-based Air Quality Monitoring</b><br>Application No: 202541000511<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>Underwater Data Transmission using TinyML</b><br>Application No: 202541016043<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>TinyML Object Detection Test-bed</b><br>Application No: 202541087210<br><span class="badge">Filed</span></div>
 
 <h2>Research Projects / Student Works</h2>
 
-<div class="pub-card">
-<b>Interpretable ECG Classification using CNN-SE</b><br>
-<span class="track">Healthcare</span>
-</div>
-
-<div class="pub-card">
-<b>Real-Time Fetal Health Classification</b><br>
-<span class="track">AI/ML</span><br>
-Student: Chandana
-</div>
-
-<div class="pub-card">
-<b>GAN-LightGBM Intrusion Detection</b><br>
-<span class="track">Cyber Security</span><br>
-Student: Swetha
-</div>
-
-<div class="pub-card">
-<b>IoUT Vision System</b><br>
-<span class="track">Communication</span><br>
-Student: Jahnava
-</div>
-
-<div class="pub-card">
-<b>ECG-based Person Identification</b><br>
-<span class="track">IoT</span>
-</div>
-
-<div class="pub-card">
-<b>Indoor Localization using TinyML</b><br>
-<span class="track">IoT</span>
-</div>
-
-<div class="pub-card">
-<b>LUMI: On-device LLM Framework</b><br>
-<span class="track">Cyber Security</span>
-</div>
-
-<div class="pub-card">
-<b>H-CGRU Net for Fetal Health</b><br>
-<span class="track">Healthcare</span><br>
-Student: Sahaja
-</div>
-
-<div class="pub-card">
-<b>Plant Leaf Disease Recognition</b><br>
-<span class="track">Environmental</span>
-</div>
-
-<div class="pub-card">
-<b>Energy-Efficient TinyML Systems</b><br>
-<span class="track">Computer Vision</span><br>
-Student: Nomitha
-</div>
+<div class="pub-card"><b>Interpretable ECG Classification using CNN-SE</b><br><span class="track">Healthcare</span></div>
+<div class="pub-card"><b>Real-Time Fetal Health Classification</b><br><span class="track">AI/ML</span><br>Student: Chandana</div>
+<div class="pub-card"><b>GAN-LightGBM Intrusion Detection</b><br><span class="track">Cyber Security</span><br>Student: Swetha</div>
+<div class="pub-card"><b>IoUT Vision System</b><br><span class="track">Communication</span><br>Student: Jahnava</div>
+<div class="pub-card"><b>ECG-based Person Identification</b><br><span class="track">IoT</span></div>
+<div class="pub-card"><b>Indoor Localization using TinyML</b><br><span class="track">IoT</span></div>
+<div class="pub-card"><b>LUMI: On-device LLM Framework</b><br><span class="track">Cyber Security</span></div>
+<div class="pub-card"><b>H-CGRU Net for Fetal Health</b><br><span class="track">Healthcare</span><br>Student: Sahaja</div>
+<div class="pub-card"><b>Plant Leaf Disease Recognition</b><br><span class="track">Environmental</span></div>
+<div class="pub-card"><b>Energy-Efficient TinyML Systems</b><br><span class="track">Computer Vision</span><br>Student: Nomitha</div>
 
 </div>
 </div>
