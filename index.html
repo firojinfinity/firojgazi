@@ -39,6 +39,15 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37,99,235,0.6);
 }
 
 .links a {
@@ -155,6 +164,27 @@ ul { line-height: 1.8; }
     color: #2563eb;
     text-decoration: none;
 }
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: 6px;
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.track {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    background: #e0f2fe;
+    color: #0369a1;
+}
 </style>
 </head>
 
@@ -177,7 +207,7 @@ ul { line-height: 1.8; }
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
-        <a href="#" onclick="openPublications()">Publications</a>
+        <a href="#" onclick="openPublications()">Research Output</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -190,9 +220,8 @@ ul { line-height: 1.8; }
 <section id="about" class="fade">
 <h1>About</h1>
 <p>
-Dr. Firoj Gazi is a researcher specializing in Internet of Things (IoT), Internet of Underwater Things (IoUT),
-and intelligent communication systems. His work focuses on energy-efficient and reliable protocols
-for underwater acoustic networks using reinforcement learning and SDN.
+Dr. Firoj Gazi is a researcher specializing in IoT, IoUT, and intelligent communication systems,
+focusing on energy-efficient underwater networks and AI-driven solutions.
 </p>
 </section>
 
@@ -253,66 +282,51 @@ for underwater acoustic networks using reinforcement learning and SDN.
 <div id="pubPanel">
 
 <div class="pub-header">
-    <h1>Publications</h1>
+    <h1>Research Output</h1>
     <button onclick="closePublications()">✕</button>
 </div>
 
 <div class="pub-content">
 
 <h2>Journal Articles</h2>
-
-<div class="pub-card">
-<b>ProStream: Programmable Underwater IoT Network for Multimedia Streaming</b><br>
-IEEE IoT Journal, 2022<br>
-<a href="https://doi.org/10.1109/JIOT.2022.3159404" target="_blank">DOI</a>
-</div>
-
-<div class="pub-card">
-<b>RE-MAC: Hybrid MAC Protocol for Underwater Multimedia Communication</b><br>
-IEEE Systems Journal, 2022
-</div>
-
-<div class="pub-card">
-<b>AquaStream: Multihop Multimedia Streaming</b><br>
-IEEE IoT Journal, 2021<br>
-<a href="https://doi.org/10.1109/JIOT.2021.3133341" target="_blank">DOI</a>
-</div>
+<div class="pub-card"><b>ProStream</b><br>IEEE IoT Journal, 2022</div>
+<div class="pub-card"><b>RE-MAC</b><br>IEEE Systems Journal, 2022</div>
+<div class="pub-card"><b>AquaStream</b><br>IEEE IoT Journal, 2021</div>
 
 <h2>Conference Papers</h2>
+<div class="pub-card"><b>UnRest</b><br>IEEE GLOBECOM, 2020</div>
+<div class="pub-card"><b>IoT Traffic Control</b><br>IC3IoT, 2018</div>
 
-<div class="pub-card">
-<b>UnRest: Underwater Reliable Acoustic Communication</b><br>
-IEEE GLOBECOM, 2020
-</div>
+<h2>Patents</h2>
+<div class="pub-card"><b>Smart Indoor Localization</b><br>202441067500<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>ATTENDEDGE</b><br>202441077282<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>FEELGANs Medical System</b><br>202441083307<br><span class="badge">Filed</span></div>
+<div class="pub-card"><b>Retinal Disease Detection</b><br>202441066371<br><span class="badge">Filed</span></div>
 
-<div class="pub-card">
-<b>IoT Traffic Congestion Control System</b><br>
-IC3IoT, IEEE, 2018
-</div>
+<h2>Research Projects</h2>
+<div class="pub-card"><b>ECG Classification</b><br><span class="track">Healthcare</span></div>
+<div class="pub-card"><b>Fetal Health ML</b><br><span class="track">AI/ML</span></div>
+<div class="pub-card"><b>GAN Intrusion Detection</b><br><span class="track">Cyber Security</span></div>
 
 </div>
 
 </div>
 
 <script>
-/* Fade animation */
 const faders = document.querySelectorAll('.fade');
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
+entries.forEach(entry => {
+if (entry.isIntersecting) entry.target.classList.add('show');
 });
-faders.forEach(fade => observer.observe(fade));
+});
+faders.forEach(f => observer.observe(f));
 
-/* Publications Panel */
 function openPublications() {
-    document.getElementById("pubPanel").classList.add("active");
+document.getElementById("pubPanel").classList.add("active");
 }
 
 function closePublications() {
-    document.getElementById("pubPanel").classList.remove("active");
+document.getElementById("pubPanel").classList.remove("active");
 }
 </script>
 
