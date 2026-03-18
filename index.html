@@ -9,9 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -33,14 +31,8 @@ body {
 }
 
 @keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 .profile-img {
@@ -51,34 +43,19 @@ body {
     margin-bottom: 10px;
 }
 
-.sidebar h2 {
-    margin: 5px 0;
-}
+.sidebar p { color: #9ca3af; font-size: 14px; }
 
-.sidebar p {
-    font-size: 14px;
-    color: #9ca3af;
-}
-
-/* Links */
 .links a {
     display: block;
     margin: 8px 0;
     color: #d1d5db;
     text-decoration: none;
-    font-size: 14px;
     transition: 0.3s;
 }
 
-.links a:hover {
-    color: white;
-    transform: translateX(5px);
-}
+.links a:hover { color: white; transform: translateX(5px); }
 
-/* Navigation */
-.nav {
-    margin-top: 20px;
-}
+.nav { margin-top: 20px; }
 
 .nav a {
     display: block;
@@ -87,9 +64,7 @@ body {
     text-decoration: none;
 }
 
-.nav a:hover {
-    color: white;
-}
+.nav a:hover { color: white; }
 
 /* Main */
 .main {
@@ -103,23 +78,16 @@ section {
     transition: 0.3s;
 }
 
-section:hover {
-    transform: translateY(-3px);
-}
+section:hover { transform: translateY(-3px); }
 
-h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+h1 { font-size: 30px; }
 
 h2 {
     border-bottom: 2px solid #e5e7eb;
     padding-bottom: 5px;
 }
 
-ul {
-    line-height: 1.8;
-}
+ul { line-height: 1.8; }
 
 /* Fade animation */
 .fade {
@@ -137,10 +105,8 @@ ul {
 
 <body>
 
-<!-- Sidebar -->
 <div class="sidebar">
-
-    <img src="profile.jpg" class="profile-img" alt="Profile">
+    <img src="profile.jpg" class="profile-img">
 
     <h2>Dr. Firoj Gazi</h2>
     <p>IoT | Edge AI | IoUT</p>
@@ -148,43 +114,87 @@ ul {
     <div class="links">
         <a href="https://github.com/firojinfinity" target="_blank">GitHub</a>
         <a href="https://scholar.google.com/citations?user=Qs5HY2QAAAAJ" target="_blank">Google Scholar</a>
-        <a href="https://thingspeak.com/channels/299088/" target="_blank">ThingSpeak</a>
+        <a href="https://thingspeak.com/channels/299088/">ThingSpeak</a>
     </div>
 
     <div class="nav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </div>
-
 </div>
 
-<!-- Main Content -->
 <div class="main">
 
 <section id="about" class="fade">
-    <h1>About</h1>
-    <p>
-        I am a researcher and academician specializing in Internet of Things (IoT),
-        Internet of Underwater Things (IoUT), and Edge AI systems. My work focuses
-        on reliable communication, multimedia streaming, and intelligent protocol
-        design in resource-constrained environments.
-    </p>
+<h1>About</h1>
+<p>
+Researcher specializing in IoT, Internet of Underwater Things (IoUT), and Edge AI.
+Focus on underwater multimedia communication, reinforcement learning-based MAC protocols,
+and real-world deployment of intelligent systems.
+</p>
 </section>
 
 <section id="research" class="fade">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Internet of Things (IoT)</li>
-        <li>Internet of Underwater Things (IoUT)</li>
-        <li>Underwater Acoustic Communication</li>
-        <li>Edge AI and Intelligent Systems</li>
-    </ul>
+<h2>Research Interests</h2>
+<ul>
+<li>Internet of Things (IoT)</li>
+<li>Internet of Underwater Things (IoUT)</li>
+<li>Underwater Acoustic Networks</li>
+<li>Edge AI Systems</li>
+</ul>
+</section>
+
+<section id="experience" class="fade">
+<h2>Experience</h2>
+<ul>
+<li><b>Associate Professor</b> – UEM Jaipur (2022)</li>
+<li><b>Assistant Professor</b> – GECR Jharkhand (2018)</li>
+<li><b>JRF</b> – IIT Kharagpur (2018–2020)</li>
+<li><b>Project Assistant</b> – Jadavpur University</li>
+<li><b>RF Engineer</b> – ZTE Telecom</li>
+</ul>
+</section>
+
+<section id="publications" class="fade">
+<h2>Publications</h2>
+<ul>
+<li><b>ProStream</b> – IEEE Internet of Things Journal</li>
+<li><b>RE-MAC</b> – IEEE Systems Journal</li>
+<li><b>AquaStream</b> – IEEE IoT Journal</li>
+<li><b>UnRest</b> – IEEE GLOBECOM</li>
+</ul>
+</section>
+
+<section id="projects" class="fade">
+<h2>Projects</h2>
+<ul>
+<li>Underwater IoT Network Deployment (IIT Kharagpur)</li>
+<li>Reinforcement Learning based MAC Protocol</li>
+<li>EdgeAI Systems for Smart Environments</li>
+<li>IoT-based Smart Traffic Control System</li>
+<li>IoT Environmental Monitoring (Air Quality)</li>
+</ul>
+</section>
+
+<section id="skills" class="fade">
+<h2>Skills</h2>
+<ul>
+<li>C, Java, Python</li>
+<li>Arduino, Raspberry Pi, NodeMCU</li>
+<li>NS2, NS3</li>
+<li>HTML, CSS</li>
+</ul>
 </section>
 
 <section id="contact" class="fade">
-    <h2>Contact</h2>
-    <p>Email: firojgazi123@gmail.com</p>
+<h2>Contact</h2>
+<p>Email: firojgazi123@gmail.com</p>
+<p>Phone: +91-8420727174</p>
 </section>
 
 </div>
@@ -200,9 +210,7 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-faders.forEach(fade => {
-    observer.observe(fade);
-});
+faders.forEach(fade => observer.observe(fade));
 </script>
 
 </body>
