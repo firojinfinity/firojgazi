@@ -1,96 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>Dr. Firoj Gazi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dr. Firoj Gazi</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-html { scroll-behavior: smooth; }
 
+/* GENERAL */
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
-    background: #f9fafb;
 }
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar {
-    width: 260px;
+    width: 250px;
+    height: 100vh;
     background: #111827;
     color: white;
-    height: 100vh;
     position: fixed;
-    padding: 20px;
-    text-align: center;
+    padding: 30px;
     animation: slideIn 1s ease;
 }
 
-@keyframes slideIn {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+.sidebar h2 {
+    margin-bottom: 10px;
 }
 
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+.sidebar p {
+    font-size: 14px;
+    color: #9ca3af;
 }
 
 .links a {
     display: block;
-    margin: 8px 0;
-    color: #d1d5db;
+    color: white;
     text-decoration: none;
+    margin: 15px 0;
     transition: 0.3s;
 }
 
 .links a:hover {
-    color: white;
     transform: translateX(5px);
 }
 
-.nav a {
-    display: block;
-    margin: 10px 0;
-    color: #9ca3af;
-    text-decoration: none;
+/* CONTENT */
+.content {
+    margin-left: 280px;
+    padding: 40px;
+    width: 100%;
 }
 
-.nav a:hover { color: white; }
-
-/* Main */
-.main {
-    margin-left: 260px;
-    padding: 50px;
-    max-width: 900px;
-}
-
+/* SECTIONS */
 section {
     margin-bottom: 60px;
-    transition: 0.3s;
 }
 
-section:hover { transform: translateY(-3px); }
-
-h1 { font-size: 30px; }
-
-h2 {
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 5px;
-}
-
-ul { line-height: 1.8; }
-
-/* Fade animation */
 .fade {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s ease;
+    transition: 0.8s;
 }
 
 .fade.show {
@@ -98,7 +68,7 @@ ul { line-height: 1.8; }
     transform: translateY(0);
 }
 
-/* Publications Panel */
+/* PUBLICATION PANEL */
 #pubPanel {
     position: fixed;
     top: 0;
@@ -121,15 +91,6 @@ ul { line-height: 1.8; }
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.pub-header button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
 }
 
 .pub-content {
@@ -138,6 +99,7 @@ ul { line-height: 1.8; }
     padding: 40px;
 }
 
+/* CARDS */
 .pub-card {
     background: white;
     padding: 20px;
@@ -151,151 +113,137 @@ ul { line-height: 1.8; }
     transform: translateY(-5px);
 }
 
-.pub-card a {
-    color: #2563eb;
-    text-decoration: none;
+/* BADGES */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-top: 8px;
+    background: #dbeafe;
+    color: #1e40af;
 }
+
+/* ANIMATION */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- Sidebar -->
+<!-- SIDEBAR -->
 <div class="sidebar">
-    <img src="profile.jpg" class="profile-img">
-
     <h2>Dr. Firoj Gazi</h2>
-    <p>IoT | IoUT | Edge AI | SDN</p>
+    <p>Assistant Professor<br>SRM University AP</p>
 
     <div class="links">
-        <a href="https://github.com/firojinfinity" target="_blank">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=Qs5HY2QAAAAJ" target="_blank">Google Scholar</a>
-        <a href="https://thingspeak.com/channels/299088/" target="_blank">ThingSpeak</a>
-    </div>
-
-    <div class="nav">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
         <a href="#" onclick="openPublications()">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </div>
 </div>
 
-<!-- Main -->
-<div class="main">
+<!-- CONTENT -->
+<div class="content">
 
 <section id="about" class="fade">
-<h1>About</h1>
+<h1>About Me</h1>
 <p>
-Dr. Firoj Gazi is a researcher specializing in Internet of Things (IoT), Internet of Underwater Things (IoUT),
-and intelligent communication systems. His work focuses on energy-efficient and reliable protocols
-for underwater acoustic networks using reinforcement learning and SDN.
+Assistant Professor specializing in IoT, Edge AI, underwater communication, and intelligent systems. 
+Actively involved in interdisciplinary research combining AI, networking, and real-world deployment.
 </p>
 </section>
 
 <section id="research" class="fade">
-<h2>Research Interests</h2>
+<h1>Research</h1>
 <ul>
-<li>IoT and Smart Systems</li>
-<li>Internet of Underwater Things (IoUT)</li>
-<li>Underwater Acoustic Networks</li>
-<li>Reinforcement Learning-based MAC</li>
-<li>Software Defined Networking (SDN)</li>
-<li>Edge AI Systems</li>
-</ul>
-</section>
-
-<section id="experience" class="fade">
-<h2>Professional Experience</h2>
-<ul>
-<li><b>Postdoctoral Researcher</b> – University of Alberta (2022–2023)</li>
-<li><b>Associate Professor</b> – UEM Jaipur (2022)</li>
-<li><b>JRF</b> – IIT Kharagpur (2018–2020)</li>
-<li><b>Project Assistant</b> – Jadavpur University (2015–2018)</li>
-<li><b>Assistant Professor</b> – GECR Jharkhand (2018)</li>
-<li><b>RF Engineer</b> – ZTE Telecom (2014–2015)</li>
-</ul>
-</section>
-
-<section id="projects" class="fade">
-<h2>Projects</h2>
-<ul>
-<li>Underwater Multimedia IoT Networks</li>
-<li>RL-based MAC Protocol Design</li>
-<li>SDN-based Underwater Communication</li>
-<li>IoT Smart City Monitoring</li>
-<li>Pipeline Monitoring Systems</li>
-</ul>
-</section>
-
-<section id="skills" class="fade">
-<h2>Skills</h2>
-<ul>
-<li>C, Java, Python</li>
-<li>Arduino, Raspberry Pi, NodeMCU</li>
-<li>NS-2, NS-3</li>
-<li>HTML, CSS</li>
+<li>Underwater IoT & Acoustic Networks</li>
+<li>Edge AI & Federated Learning</li>
+<li>IoT-based Environmental Monitoring</li>
+<li>Smart Systems using TinyML</li>
 </ul>
 </section>
 
 <section id="contact" class="fade">
-<h2>Contact</h2>
-<p>Email: firojgazi123@gmail.com</p>
-<p>froj@ualberta.ca</p>
+<h1>Contact</h1>
+<p>Email: firoj.gazi@srmist.edu.in</p>
 </section>
 
 </div>
 
-<!-- Publications Panel -->
+<!-- PUBLICATION PANEL -->
 <div id="pubPanel">
 
 <div class="pub-header">
-    <h1>Publications</h1>
-    <button onclick="closePublications()">✕</button>
+<h1>Research Output</h1>
+<button onclick="closePublications()">✕</button>
 </div>
 
 <div class="pub-content">
 
-<h2>Journal Articles</h2>
+<h2>Patents</h2>
 
 <div class="pub-card">
-<b>ProStream: Programmable Underwater IoT Network for Multimedia Streaming</b><br>
-IEEE IoT Journal, 2022<br>
-<a href="https://doi.org/10.1109/JIOT.2022.3159404" target="_blank">DOI</a>
-</div>
-
-<div class="pub-card">
-<b>RE-MAC: Hybrid MAC Protocol for Underwater Multimedia Communication</b><br>
-IEEE Systems Journal, 2022
+<b>A System for Smart Indoor Localization and the Method Thereof</b><br>
+Application No: 202441067500<br>
+Inventors: Meka Naga Nandini Devi, Ch Madhu Bhushan, Hemanth Durga Kumar Siripalli, Fazal Shaik, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
 </div>
 
 <div class="pub-card">
-<b>AquaStream: Multihop Multimedia Streaming</b><br>
-IEEE IoT Journal, 2021<br>
-<a href="https://doi.org/10.1109/JIOT.2021.3133341" target="_blank">DOI</a>
-</div>
-
-<h2>Conference Papers</h2>
-
-<div class="pub-card">
-<b>UnRest: Underwater Reliable Acoustic Communication</b><br>
-IEEE GLOBECOM, 2020
+<b>ATTENDEDGE: An EdgeAI-based Smart Attendance System using 3D Object Detection</b><br>
+Application No: 202441077282<br>
+Inventors: Fazal Shaik, Meka Naga Nandini Devi, Ch Madhu Bhushan, A Surayya, Lakshmi Priya Koppuravuri, Abus Sami, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
 </div>
 
 <div class="pub-card">
-<b>IoT Traffic Congestion Control System</b><br>
-IC3IoT, IEEE, 2018
+<b>Medical Image Analysis using Federated Edge Learning with GANs (FEELGANs)</b><br>
+Application No: 202441083307<br>
+Inventors: Vennela, Siddartha, Usman, Charishma, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>A System for Detecting Retinal Diseases</b><br>
+Application No: 202441066371<br>
+Inventors: Md Muzakkir Hussain, Firoj Gazi<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>Air Quality Monitoring and Alert Generation using AI</b><br>
+Application No: 202541000511<br>
+Inventors: Ch Madhu Bhushan, Lakshmi Priya, A Surayya, Firoj Gazi, Md Muzakkir Hussain, Dinesh Reddy<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>Integrated Underwater Data Transmission and Object Detection using TinyML</b><br>
+Application No: 202541016043<br>
+Inventors: Sai Srihitha, Jahnava Sai, Ch Madhu Bhushan, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>TinyML Test-bed for Real-Time Object Detection</b><br>
+Application No: 202541087210<br>
+Inventors: Lakshmi Priya, Ch Madhu Bhushan, Nomitha Prasanthi, Fazal Shaik, Hemanth, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
 </div>
 
 </div>
-
 </div>
 
+<!-- JS -->
 <script>
-/* Fade animation */
+
+// Fade animation
 const faders = document.querySelectorAll('.fade');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -304,9 +252,9 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 });
-faders.forEach(fade => observer.observe(fade));
+faders.forEach(f => observer.observe(f));
 
-/* Publications Panel */
+// Panel control
 function openPublications() {
     document.getElementById("pubPanel").classList.add("active");
 }
@@ -314,6 +262,7 @@ function openPublications() {
 function closePublications() {
     document.getElementById("pubPanel").classList.remove("active");
 }
+
 </script>
 
 </body>
