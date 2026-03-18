@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,6 +13,7 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     display: flex;
+    background: #f9fafb;
 }
 
 /* Sidebar */
@@ -23,10 +24,19 @@ body {
     height: 100vh;
     position: fixed;
     padding: 20px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 .sidebar h2 {
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
 
 .sidebar p {
@@ -34,35 +44,58 @@ body {
     color: #9ca3af;
 }
 
-.sidebar a {
+/* Links */
+.links a {
+    display: block;
+    margin: 8px 0;
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    color: white;
+}
+
+/* Navigation */
+.nav {
+    margin-top: 20px;
+}
+
+.nav a {
     display: block;
     margin: 10px 0;
-    color: #d1d5db;
+    color: #9ca3af;
     text-decoration: none;
 }
 
-.sidebar a:hover {
+.nav a:hover {
     color: white;
 }
 
 /* Main */
 .main {
     margin-left: 260px;
-    padding: 40px;
+    padding: 50px;
     max-width: 900px;
 }
 
 section {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 h2 {
     border-bottom: 2px solid #e5e7eb;
     padding-bottom: 5px;
+}
+
+ul {
+    line-height: 1.8;
 }
 </style>
 </head>
@@ -71,12 +104,24 @@ h2 {
 
 <!-- Sidebar -->
 <div class="sidebar">
+
+    <img src="profile.jpg" class="profile-img" alt="Profile">
+
     <h2>Dr. Firoj Gazi</h2>
     <p>IoT | Edge AI | IoUT</p>
 
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#contact">Contact</a>
+    <div class="links">
+        <a href="https://github.com/firojinfinity" target="_blank">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=Qs5HY2QAAAAJ" target="_blank">Google Scholar</a>
+        <a href="https://thingspeak.com/channels/299088/" target="_blank">ThingSpeak</a>
+    </div>
+
+    <div class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+    </div>
+
 </div>
 
 <!-- Main Content -->
@@ -85,18 +130,20 @@ h2 {
 <section id="about">
     <h1>About</h1>
     <p>
-        I am a researcher working in Internet of Things (IoT),
-        Internet of Underwater Things (IoUT), and Edge AI systems.
+        I am a researcher and academician specializing in Internet of Things (IoT),
+        Internet of Underwater Things (IoUT), and Edge AI systems. My work focuses
+        on reliable communication, multimedia streaming, and intelligent protocol
+        design in resource-constrained environments.
     </p>
 </section>
 
 <section id="research">
     <h2>Research Interests</h2>
     <ul>
-        <li>IoT</li>
-        <li>IoUT</li>
-        <li>Underwater Communication</li>
-        <li>Edge AI</li>
+        <li>Internet of Things (IoT)</li>
+        <li>Internet of Underwater Things (IoUT)</li>
+        <li>Underwater Acoustic Communication</li>
+        <li>Edge AI and Intelligent Systems</li>
     </ul>
 </section>
 
