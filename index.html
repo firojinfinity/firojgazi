@@ -68,11 +68,32 @@ h2 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+video {
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
 .badge {
     background: #dbeafe;
     padding: 3px 8px;
     border-radius: 5px;
     font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background: #e5e7eb;
 }
 </style>
 </head>
@@ -97,15 +118,15 @@ h2 {
 </div>
 </div>
 
+<!-- Main -->
 <div class="main">
 
 <section id="about">
 <h1>About</h1>
 <p>
-Dr. Firoj Gazi is a researcher specializing in Internet of Things (IoT), Internet of Underwater Things (IoUT), 
-and intelligent communication systems. His research focuses on energy-efficient underwater acoustic networks, 
-reinforcement learning-based protocol design, and AI-driven edge systems. He works on real-world deployments 
-in smart cities, healthcare AI, and resource-constrained environments.
+Dr. Firoj Gazi is a researcher specializing in IoT, IoUT, and intelligent communication systems. 
+His work focuses on energy-efficient underwater networks, reinforcement learning-based protocols, 
+and AI-driven edge systems for real-world deployment.
 </p>
 </section>
 
@@ -113,11 +134,11 @@ in smart cities, healthcare AI, and resource-constrained environments.
 <h2>Research Interests</h2>
 <ul>
 <li>IoT and Smart Systems</li>
-<li>Internet of Underwater Things (IoUT)</li>
-<li>Underwater Acoustic Communication</li>
-<li>Reinforcement Learning-based MAC Protocols</li>
+<li>Internet of Underwater Things</li>
+<li>Underwater Acoustic Networks</li>
+<li>Reinforcement Learning-based MAC</li>
 <li>Software Defined Networking</li>
-<li>Edge AI and TinyML</li>
+<li>Edge AI & TinyML</li>
 </ul>
 </section>
 
@@ -133,114 +154,96 @@ in smart cities, healthcare AI, and resource-constrained environments.
 </ul>
 </section>
 
+<!-- PROJECTS WITH VIDEOS -->
 <section id="projects">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<h2>Projects</h2>
 
+<div class="pub-card">
+<b>Underwater Multimedia IoT Networks</b>
+<p>Multi-hop underwater acoustic communication system.</p>
+
+<video controls preload="metadata">
+<source src="./1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="pub-card">
+<b>RL-based MAC Protocol Design</b>
+<p>Reinforcement learning-based intelligent MAC protocol.</p>
+
+<video controls preload="metadata">
+<source src="./2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="pub-card">
+<b>SDN-based Underwater Communication</b></div>
+
+<div class="pub-card">
+<b>IoT Smart City Monitoring</b></div>
+
+<div class="pub-card">
+<b>Pipeline Monitoring Systems</b></div>
+
+</section>
+
+<!-- FUNDING -->
 <section id="funding">
 <h2>Seed Funding & Research Grants</h2>
 
-<table style="width:100%; border-collapse: collapse; margin-top: 20px;">
-
-<tr style="background:#e5e7eb;">
-<th style="padding:10px; border:1px solid #ccc;">S.No</th>
-<th style="padding:10px; border:1px solid #ccc;">Project Title</th>
-<th style="padding:10px; border:1px solid #ccc;">PI / Co-PI</th>
-<th style="padding:10px; border:1px solid #ccc;">Equipment</th>
-<th style="padding:10px; border:1px solid #ccc;">Recommended Fund (Rs)</th>
+<table>
+<tr>
+<th>S.No</th>
+<th>Project Title</th>
+<th>PI / Co-PI</th>
+<th>Equipment</th>
+<th>Recommended Fund</th>
 </tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #ccc;">1</td>
-
-<td style="padding:10px; border:1px solid #ccc;">
-Using Edge Intelligence for Resource Allocation in UAV-IoT Network
+<td>1</td>
+<td>Using Edge Intelligence for Resource Allocation in UAV-IoT Network</td>
+<td>
+PI: Dr. Md Muzakkir Hussain<br>
+Co-PI: Dr. Firoj Gazi
 </td>
-
-<td style="padding:10px; border:1px solid #ccc;">
-<b>PI:</b> Dr. Md Muzakkir Hussain<br>
-<b>Co-PI:</b> Dr. Firoj Gazi
-</td>
-
-<td style="padding:10px; border:1px solid #ccc;">
-Equipment and consumables (List Attached)
-</td>
-
-<td style="padding:10px; border:1px solid #ccc;">
-₹ 7,00,000
-</td>
+<td>Equipment and consumables (List Attached)</td>
+<td>₹ 7,00,000</td>
 </tr>
 
 </table>
+</section>
 
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 <ul>
-<li><b>Programming:</b> C, Java, Python</li>
-<li><b>IoT Platforms:</b> Arduino, Raspberry Pi, NodeMCU</li>
-<li><b>Simulation:</b> NS-2, NS-3</li>
-<li><b>AI/ML:</b> TinyML, TensorFlow Lite, CNN, RNN</li>
-<li><b>Tools:</b> MATLAB, OpenCV, Scikit-learn</li>
-<li><b>Web:</b> HTML, CSS</li>
+<li>C, Java, Python</li>
+<li>Arduino, Raspberry Pi, NodeMCU</li>
+<li>NS-2, NS-3</li>
+<li>TensorFlow Lite, TinyML</li>
+<li>MATLAB, OpenCV</li>
+<li>HTML, CSS</li>
 </ul>
 </section>
 
+<!-- PUBLICATIONS -->
 <section id="publications">
 <h2>Research Output</h2>
 
-<h3>Journal Papers</h3>
+<h3>Patents</h3>
+<div class="pub-card">Smart Indoor Localization – 202441067500</div>
+<div class="pub-card">ATTENDEDGE – 202441077282</div>
+<div class="pub-card">Federated Medical AI – 202441083307</div>
+<div class="pub-card">Retinal Detection – 202441066371</div>
+<div class="pub-card">Air Quality AI – 202541000511</div>
+<div class="pub-card">Underwater TinyML – 202541016043</div>
+<div class="pub-card">TinyML Testbed – 202541087210</div>
 
-<div class="pub-card">RL-based MAC Protocol – ACM TOSN (2022)</div>
+<h3>Publications</h3>
+<div class="pub-card">RL-based MAC – ACM TOSN (2022)</div>
 <div class="pub-card">ProStream – IEEE IoT Journal (2022)</div>
 <div class="pub-card">AquaStream – IEEE IoT Journal (2021)</div>
-<div class="pub-card">RE-MAC – IEEE Systems Journal (2022)</div>
-<div class="pub-card">Edge Server Placement – IEEE Access (2025)</div>
-<div class="pub-card">TinyML Edge AI – Scientific Reports (2025)</div>
-
-<h3>Patents</h3>
-
-<div class="pub-card">
-Smart Indoor Localization System<br>
-Application No: 202441067500 <span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-ATTENDEDGE Smart Attendance System<br>
-Application No: 202441077282 <span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-Medical Image Analysis using Federated Learning<br>
-Application No: 202441083307 <span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-Retinal Disease Detection System<br>
-Application No: 202441066371 <span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-AI-based Air Quality Monitoring<br>
-Application No: 202541000511 <span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-Underwater Data Transmission + TinyML<br>
-Application No: 202541016043 <span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-TinyML Testbed System<br>
-Application No: 202541087210 <span class="badge">Filed</span>
-</div>
-
-<h3>Conference Papers</h3>
-
-<div class="pub-card">Smart City Air Quality – DCOSS (2017)</div>
-<div class="pub-card">AirSense – IEEE Sensors (2016)</div>
-<div class="pub-card">Traffic Control IoT – 2018</div>
-<div class="pub-card">Traffic Queue Detection – 2019</div>
-<div class="pub-card">UnRest – IEEE GLOBECOM (2020)</div>
-<div class="pub-card">Multiple IEEE FNWF & IE Papers – 2025</div>
 
 </section>
 
