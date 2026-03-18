@@ -60,40 +60,28 @@ h2 {
     padding-bottom: 6px;
 }
 
+/* Cards */
 .pub-card {
     background: white;
-    padding: 15px;
-    margin: 12px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+/* Video */
 video {
-    margin-top: 10px;
+    margin-top: 12px;
     border-radius: 8px;
     width: 100%;
 }
 
+/* Badge */
 .badge {
     background: #dbeafe;
     padding: 3px 8px;
     border-radius: 5px;
     font-size: 12px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-th {
-    background: #e5e7eb;
 }
 </style>
 </head>
@@ -124,9 +112,10 @@ th {
 <section id="about">
 <h1>About</h1>
 <p>
-Dr. Firoj Gazi is a researcher specializing in IoT, IoUT, and intelligent communication systems. 
-His work focuses on energy-efficient underwater networks, reinforcement learning-based protocols, 
-and AI-driven edge systems for real-world deployment.
+Dr. Firoj Gazi is an interdisciplinary researcher specializing in Internet of Things (IoT), 
+Internet of Underwater Things (IoUT), and intelligent communication systems. His research focuses 
+on energy-efficient underwater acoustic networks, reinforcement learning-based MAC protocols, 
+and AI-driven edge systems for real-world deployments in smart environments.
 </p>
 </section>
 
@@ -134,16 +123,16 @@ and AI-driven edge systems for real-world deployment.
 <h2>Research Interests</h2>
 <ul>
 <li>IoT and Smart Systems</li>
-<li>Internet of Underwater Things</li>
+<li>Internet of Underwater Things (IoUT)</li>
 <li>Underwater Acoustic Networks</li>
-<li>Reinforcement Learning-based MAC</li>
-<li>Software Defined Networking</li>
-<li>Edge AI & TinyML</li>
+<li>Reinforcement Learning-based MAC Protocols</li>
+<li>Software Defined Networking (SDN)</li>
+<li>Edge AI and TinyML</li>
 </ul>
 </section>
 
 <section id="experience">
-<h2>Experience</h2>
+<h2>Professional Experience</h2>
 <ul>
 <li>Postdoctoral Researcher – University of Alberta (2022–2023)</li>
 <li>Associate Professor – UEM Jaipur</li>
@@ -154,13 +143,13 @@ and AI-driven edge systems for real-world deployment.
 </ul>
 </section>
 
-<!-- PROJECTS WITH VIDEOS -->
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
 
 <div class="pub-card">
 <b>Underwater Multimedia IoT Networks</b>
-<p>Multi-hop underwater acoustic communication system.</p>
+<p>Development of multi-hop underwater acoustic communication systems.</p>
 
 <video controls preload="metadata">
 <source src="./1.mp4" type="video/mp4">
@@ -168,8 +157,8 @@ and AI-driven edge systems for real-world deployment.
 </div>
 
 <div class="pub-card">
-<b>RL-based MAC Protocol Design</b>
-<p>Reinforcement learning-based intelligent MAC protocol.</p>
+<b>Reinforcement Learning-based MAC Protocol Design</b>
+<p>Adaptive MAC protocols using reinforcement learning for efficient communication.</p>
 
 <video controls preload="metadata">
 <source src="./2.mp4" type="video/mp4">
@@ -177,13 +166,19 @@ and AI-driven edge systems for real-world deployment.
 </div>
 
 <div class="pub-card">
-<b>SDN-based Underwater Communication</b></div>
+<b>SDN-based Underwater Communication</b>
+<p>Centralized control and dynamic routing using SDN.</p>
+</div>
 
 <div class="pub-card">
-<b>IoT Smart City Monitoring</b></div>
+<b>IoT Smart City Monitoring</b>
+<p>Air quality and traffic monitoring using IoT and crowd sensing.</p>
+</div>
 
 <div class="pub-card">
-<b>Pipeline Monitoring Systems</b></div>
+<b>Pipeline Monitoring Systems</b>
+<p>IoT-based industrial monitoring and leak detection.</p>
+</div>
 
 </section>
 
@@ -191,40 +186,50 @@ and AI-driven edge systems for real-world deployment.
 <section id="funding">
 <h2>Seed Funding & Research Grants</h2>
 
-<table>
-<tr>
-<th>S.No</th>
-<th>Project Title</th>
-<th>PI / Co-PI</th>
-<th>Equipment</th>
-<th>Recommended Fund</th>
-</tr>
+<div class="pub-card">
+<b>Using Edge Intelligence for Resource Allocation in UAV-IoT Network</b><br><br>
 
-<tr>
-<td>1</td>
-<td>Using Edge Intelligence for Resource Allocation in UAV-IoT Network</td>
-<td>
-PI: Dr. Md Muzakkir Hussain<br>
-Co-PI: Dr. Firoj Gazi
-</td>
-<td>Equipment and consumables (List Attached)</td>
-<td>₹ 7,00,000</td>
-</tr>
+<b>Principal Investigator (PI):</b><br>
+Dr. Md Muzakkir Hussain<br><br>
 
-</table>
+<b>Co-Principal Investigator (Co-PI):</b><br>
+Dr. Firoj Gazi<br><br>
+
+<b>Equipment & Resources:</b><br>
+Equipment and consumables (List Attached)<br><br>
+
+<b>Recommended Funding:</b><br>
+₹ 7,00,000
+</div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
+
 <ul>
-<li>C, Java, Python</li>
-<li>Arduino, Raspberry Pi, NodeMCU</li>
-<li>NS-2, NS-3</li>
-<li>TensorFlow Lite, TinyML</li>
-<li>MATLAB, OpenCV</li>
-<li>HTML, CSS</li>
+
+<li><b>Programming & Development:</b> C, Java, Python, Embedded C</li>
+
+<li><b>IoT & Embedded Systems:</b> Arduino, Raspberry Pi, NodeMCU, ESP8266/ESP32</li>
+
+<li><b>Networking:</b> IoT, IoUT, WSN, Underwater Networks, SDN</li>
+
+<li><b>Simulation:</b> NS-2, NS-3, MATLAB</li>
+
+<li><b>AI/ML & Edge AI:</b> TinyML, TensorFlow Lite, CNN, RNN, GANs, Federated Learning</li>
+
+<li><b>Signal & Image Processing:</b> ECG, Medical Imaging, OpenCV</li>
+
+<li><b>Data Science:</b> NumPy, Pandas, Scikit-learn</li>
+
+<li><b>Systems:</b> Edge Deployment, Real-time Systems</li>
+
+<li><b>Web:</b> HTML, CSS, Basic JavaScript</li>
+
 </ul>
+
 </section>
 
 <!-- PUBLICATIONS -->
@@ -232,16 +237,18 @@ Co-PI: Dr. Firoj Gazi
 <h2>Research Output</h2>
 
 <h3>Patents</h3>
-<div class="pub-card">Smart Indoor Localization – 202441067500</div>
-<div class="pub-card">ATTENDEDGE – 202441077282</div>
-<div class="pub-card">Federated Medical AI – 202441083307</div>
-<div class="pub-card">Retinal Detection – 202441066371</div>
-<div class="pub-card">Air Quality AI – 202541000511</div>
-<div class="pub-card">Underwater TinyML – 202541016043</div>
-<div class="pub-card">TinyML Testbed – 202541087210</div>
 
-<h3>Publications</h3>
-<div class="pub-card">RL-based MAC – ACM TOSN (2022)</div>
+<div class="pub-card">Smart Indoor Localization – 202441067500 <span class="badge">Filed</span></div>
+<div class="pub-card">ATTENDEDGE – 202441077282 <span class="badge">Filed</span></div>
+<div class="pub-card">Federated Medical AI – 202441083307 <span class="badge">Filed</span></div>
+<div class="pub-card">Retinal Detection – 202441066371 <span class="badge">Filed</span></div>
+<div class="pub-card">Air Quality AI – 202541000511 <span class="badge">Filed</span></div>
+<div class="pub-card">Underwater TinyML – 202541016043 <span class="badge">Filed</span></div>
+<div class="pub-card">TinyML Testbed – 202541087210 <span class="badge">Filed</span></div>
+
+<h3>Key Publications</h3>
+
+<div class="pub-card">RL-based MAC Protocol – ACM TOSN (2022)</div>
 <div class="pub-card">ProStream – IEEE IoT Journal (2022)</div>
 <div class="pub-card">AquaStream – IEEE IoT Journal (2021)</div>
 
