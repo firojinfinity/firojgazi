@@ -39,7 +39,6 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .links a {
@@ -98,11 +97,70 @@ ul { line-height: 1.8; }
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Publications Panel */
+#pubPanel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: #f9fafb;
+    transition: 0.5s;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+#pubPanel.active {
+    right: 0;
+}
+
+.pub-header {
+    background: #111827;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pub-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.pub-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+}
+
+.pub-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.pub-card:hover {
+    transform: translateY(-5px);
+}
+
+.pub-card a {
+    color: #2563eb;
+    text-decoration: none;
+}
 </style>
 </head>
 
 <body>
 
+<!-- Sidebar -->
 <div class="sidebar">
     <img src="profile.jpg" class="profile-img">
 
@@ -119,109 +177,126 @@ ul { line-height: 1.8; }
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
+        <a href="#" onclick="openPublications()">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </div>
 </div>
 
+<!-- Main -->
 <div class="main">
 
 <section id="about" class="fade">
 <h1>About</h1>
 <p>
-Dr. Firoj Gazi is a researcher specializing in the Internet of Things (IoT), Internet of Underwater Things (IoUT),
-and intelligent communication systems. His work focuses on designing scalable, energy-efficient, and reliable
-protocols for resource-constrained environments, particularly underwater acoustic networks.
-
-He has over 5+ years of research experience and has contributed to high-impact venues including IEEE IoT Journal,
-IEEE Systems Journal, ACM Transactions, and IEEE GLOBECOM. His research integrates reinforcement learning,
-software-defined networking (SDN), and real-world IoT deployments.
+Dr. Firoj Gazi is a researcher specializing in Internet of Things (IoT), Internet of Underwater Things (IoUT),
+and intelligent communication systems. His work focuses on energy-efficient and reliable protocols
+for underwater acoustic networks using reinforcement learning and SDN.
 </p>
 </section>
 
 <section id="research" class="fade">
 <h2>Research Interests</h2>
 <ul>
-<li>Internet of Things (IoT) and Smart Systems</li>
+<li>IoT and Smart Systems</li>
 <li>Internet of Underwater Things (IoUT)</li>
-<li>Underwater Acoustic Sensor Networks</li>
-<li>Reinforcement Learning for MAC Protocols</li>
+<li>Underwater Acoustic Networks</li>
+<li>Reinforcement Learning-based MAC</li>
 <li>Software Defined Networking (SDN)</li>
-<li>Edge AI and Intelligent Systems</li>
+<li>Edge AI Systems</li>
 </ul>
 </section>
 
 <section id="experience" class="fade">
 <h2>Professional Experience</h2>
 <ul>
-<li><b>Postdoctoral Researcher</b> – University of Alberta, Canada (2022–2023)  
-<br>Worked on pipeline vibration monitoring and activity detection systems.</li>
-
-<li><b>Associate Professor</b> – University of Engineering and Management, Jaipur (2022)  
-<br>Taught Data Structures, DBMS and supervised major projects.</li>
-
-<li><b>Junior Research Fellow</b> – IIT Kharagpur (2018–2020)  
-<br>Developed underwater multimedia sensor networks under NRB project.</li>
-
-<li><b>Project Assistant</b> – Jadavpur University (2015–2018)  
-<br>Worked on IoT-based air quality monitoring for smart cities.</li>
-
-<li><b>Assistant Professor</b> – Govt. Engineering College Ramgarh (2018)</li>
-
-<li><b>Visiting Faculty</b> – UEM Kolkata (2017)</li>
-
-<li><b>RF Engineer</b> – ZTE Telecom India (2014–2015)  
-<br>Worked on Airtel 4G network deployment and optimization.</li>
-</ul>
-</section>
-
-<section id="publications" class="fade">
-<h2>Selected Publications</h2>
-<ul>
-<li><b>ProStream</b> – IEEE Internet of Things Journal (2022)</li>
-<li><b>RE-MAC</b> – IEEE Systems Journal (2022)</li>
-<li><b>AquaStream</b> – IEEE IoT Journal (2021)</li>
-<li><b>RL-Based MAC Protocol</b> – ACM Transactions on Sensor Networks</li>
-<li><b>UnRest</b> – IEEE GLOBECOM 2020</li>
+<li><b>Postdoctoral Researcher</b> – University of Alberta (2022–2023)</li>
+<li><b>Associate Professor</b> – UEM Jaipur (2022)</li>
+<li><b>JRF</b> – IIT Kharagpur (2018–2020)</li>
+<li><b>Project Assistant</b> – Jadavpur University (2015–2018)</li>
+<li><b>Assistant Professor</b> – GECR Jharkhand (2018)</li>
+<li><b>RF Engineer</b> – ZTE Telecom (2014–2015)</li>
 </ul>
 </section>
 
 <section id="projects" class="fade">
-<h2>Research & Development Projects</h2>
+<h2>Projects</h2>
 <ul>
-<li>Underwater Multimedia IoT Network (IIT Kharagpur)</li>
-<li>Reinforcement Learning-based MAC Protocol Design</li>
-<li>SDN-enabled Underwater Communication (ProStream)</li>
-<li>IoT-based Smart City Air Quality Monitoring</li>
-<li>Pipeline Monitoring System (Postdoctoral Research)</li>
+<li>Underwater Multimedia IoT Networks</li>
+<li>RL-based MAC Protocol Design</li>
+<li>SDN-based Underwater Communication</li>
+<li>IoT Smart City Monitoring</li>
+<li>Pipeline Monitoring Systems</li>
 </ul>
 </section>
 
 <section id="skills" class="fade">
-<h2>Technical Skills</h2>
+<h2>Skills</h2>
 <ul>
-<li><b>Programming:</b> C, Java, Python</li>
-<li><b>IoT Platforms:</b> Arduino, Raspberry Pi, NodeMCU, Contiki OS</li>
-<li><b>Networking Tools:</b> NS-2, NS-3</li>
-<li><b>Web:</b> HTML, CSS</li>
-<li><b>Protocols:</b> CoAP, MQTT</li>
+<li>C, Java, Python</li>
+<li>Arduino, Raspberry Pi, NodeMCU</li>
+<li>NS-2, NS-3</li>
+<li>HTML, CSS</li>
 </ul>
 </section>
 
 <section id="contact" class="fade">
 <h2>Contact</h2>
 <p>Email: firojgazi123@gmail.com</p>
-<p>Alternate: froj@ualberta.ca</p>
-<p>Alternate: firojgazi@iitkgp.ac.in</p>
+<p>froj@ualberta.ca</p>
 </section>
 
 </div>
 
-<script>
-const faders = document.querySelectorAll('.fade');
+<!-- Publications Panel -->
+<div id="pubPanel">
 
+<div class="pub-header">
+    <h1>Publications</h1>
+    <button onclick="closePublications()">✕</button>
+</div>
+
+<div class="pub-content">
+
+<h2>Journal Articles</h2>
+
+<div class="pub-card">
+<b>ProStream: Programmable Underwater IoT Network for Multimedia Streaming</b><br>
+IEEE IoT Journal, 2022<br>
+<a href="https://doi.org/10.1109/JIOT.2022.3159404" target="_blank">DOI</a>
+</div>
+
+<div class="pub-card">
+<b>RE-MAC: Hybrid MAC Protocol for Underwater Multimedia Communication</b><br>
+IEEE Systems Journal, 2022
+</div>
+
+<div class="pub-card">
+<b>AquaStream: Multihop Multimedia Streaming</b><br>
+IEEE IoT Journal, 2021<br>
+<a href="https://doi.org/10.1109/JIOT.2021.3133341" target="_blank">DOI</a>
+</div>
+
+<h2>Conference Papers</h2>
+
+<div class="pub-card">
+<b>UnRest: Underwater Reliable Acoustic Communication</b><br>
+IEEE GLOBECOM, 2020
+</div>
+
+<div class="pub-card">
+<b>IoT Traffic Congestion Control System</b><br>
+IC3IoT, IEEE, 2018
+</div>
+
+</div>
+
+</div>
+
+<script>
+/* Fade animation */
+const faders = document.querySelectorAll('.fade');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -229,8 +304,16 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 });
-
 faders.forEach(fade => observer.observe(fade));
+
+/* Publications Panel */
+function openPublications() {
+    document.getElementById("pubPanel").classList.add("active");
+}
+
+function closePublications() {
+    document.getElementById("pubPanel").classList.remove("active");
+}
 </script>
 
 </body>
