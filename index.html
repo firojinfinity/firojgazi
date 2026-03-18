@@ -15,33 +15,23 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-    width: 260px;
+    width: 250px;
     height: 100vh;
     background: #111827;
     color: white;
     position: fixed;
     padding: 30px;
     animation: slideIn 1s ease;
-    text-align: center;
 }
 
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #2563eb;
-    transition: 0.3s;
+.sidebar h2 {
+    margin-bottom: 10px;
 }
 
-.profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+.sidebar p {
+    font-size: 14px;
+    color: #9ca3af;
 }
-
-.sidebar h2 { margin-bottom: 5px; }
-.sidebar p { font-size: 14px; color: #9ca3af; }
 
 .links a {
     display: block;
@@ -51,7 +41,9 @@ body {
     transition: 0.3s;
 }
 
-.links a:hover { transform: translateX(5px); }
+.links a:hover {
+    transform: translateX(5px);
+}
 
 /* CONTENT */
 .content {
@@ -61,7 +53,9 @@ body {
 }
 
 /* SECTIONS */
-section { margin-bottom: 60px; }
+section {
+    margin-bottom: 60px;
+}
 
 .fade {
     opacity: 0;
@@ -74,7 +68,7 @@ section { margin-bottom: 60px; }
     transform: translateY(0);
 }
 
-/* PANEL */
+/* PUBLICATION PANEL */
 #pubPanel {
     position: fixed;
     top: 0;
@@ -87,7 +81,9 @@ section { margin-bottom: 60px; }
     overflow-y: auto;
 }
 
-#pubPanel.active { right: 0; }
+#pubPanel.active {
+    right: 0;
+}
 
 .pub-header {
     background: #111827;
@@ -113,7 +109,9 @@ section { margin-bottom: 60px; }
     transition: 0.3s;
 }
 
-.pub-card:hover { transform: translateY(-5px); }
+.pub-card:hover {
+    transform: translateY(-5px);
+}
 
 /* BADGES */
 .badge {
@@ -124,16 +122,6 @@ section { margin-bottom: 60px; }
     margin-top: 8px;
     background: #dbeafe;
     color: #1e40af;
-}
-
-.track {
-    display: inline-block;
-    margin-top: 6px;
-    padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 5px;
-    background: #e0f2fe;
-    color: #0369a1;
 }
 
 /* ANIMATION */
@@ -149,16 +137,13 @@ section { margin-bottom: 60px; }
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-
-    <img src="profile.jpg" class="profile-img">
-
     <h2>Dr. Firoj Gazi</h2>
     <p>Assistant Professor<br>SRM University AP</p>
 
     <div class="links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#" onclick="openPublications()">Research Output</a>
+        <a href="#" onclick="openPublications()">Publications</a>
         <a href="#contact">Contact</a>
     </div>
 </div>
@@ -169,18 +154,18 @@ section { margin-bottom: 60px; }
 <section id="about" class="fade">
 <h1>About Me</h1>
 <p>
-Assistant Professor specializing in IoT, Edge AI, underwater communication, and intelligent systems.
-Focused on real-world deployment, interdisciplinary research, and advanced communication systems.
+Assistant Professor specializing in IoT, Edge AI, underwater communication, and intelligent systems. 
+Actively involved in interdisciplinary research combining AI, networking, and real-world deployment.
 </p>
 </section>
 
 <section id="research" class="fade">
-<h1>Research Areas</h1>
+<h1>Research</h1>
 <ul>
 <li>Underwater IoT & Acoustic Networks</li>
 <li>Edge AI & Federated Learning</li>
 <li>IoT-based Environmental Monitoring</li>
-<li>TinyML & Smart Embedded Systems</li>
+<li>Smart Systems using TinyML</li>
 </ul>
 </section>
 
@@ -191,7 +176,7 @@ Focused on real-world deployment, interdisciplinary research, and advanced commu
 
 </div>
 
-<!-- PANEL -->
+<!-- PUBLICATION PANEL -->
 <div id="pubPanel">
 
 <div class="pub-header">
@@ -203,26 +188,54 @@ Focused on real-world deployment, interdisciplinary research, and advanced commu
 
 <h2>Patents</h2>
 
-<div class="pub-card"><b>Smart Indoor Localization System</b><br>Application No: 202441067500<br><span class="badge">Filed</span></div>
-<div class="pub-card"><b>ATTENDEDGE: Smart Attendance System</b><br>Application No: 202441077282<br><span class="badge">Filed</span></div>
-<div class="pub-card"><b>Medical Image Analysis using FEELGANs</b><br>Application No: 202441083307<br><span class="badge">Filed</span></div>
-<div class="pub-card"><b>Retinal Disease Detection System</b><br>Application No: 202441066371<br><span class="badge">Filed</span></div>
-<div class="pub-card"><b>AI-based Air Quality Monitoring</b><br>Application No: 202541000511<br><span class="badge">Filed</span></div>
-<div class="pub-card"><b>Underwater Data Transmission using TinyML</b><br>Application No: 202541016043<br><span class="badge">Filed</span></div>
-<div class="pub-card"><b>TinyML Object Detection Test-bed</b><br>Application No: 202541087210<br><span class="badge">Filed</span></div>
+<div class="pub-card">
+<b>A System for Smart Indoor Localization and the Method Thereof</b><br>
+Application No: 202441067500<br>
+Inventors: Meka Naga Nandini Devi, Ch Madhu Bhushan, Hemanth Durga Kumar Siripalli, Fazal Shaik, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
 
-<h2>Research Projects / Student Works</h2>
+<div class="pub-card">
+<b>ATTENDEDGE: An EdgeAI-based Smart Attendance System using 3D Object Detection</b><br>
+Application No: 202441077282<br>
+Inventors: Fazal Shaik, Meka Naga Nandini Devi, Ch Madhu Bhushan, A Surayya, Lakshmi Priya Koppuravuri, Abus Sami, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
 
-<div class="pub-card"><b>Interpretable ECG Classification using CNN-SE</b><br><span class="track">Healthcare</span></div>
-<div class="pub-card"><b>Real-Time Fetal Health Classification</b><br><span class="track">AI/ML</span><br>Student: Chandana</div>
-<div class="pub-card"><b>GAN-LightGBM Intrusion Detection</b><br><span class="track">Cyber Security</span><br>Student: Swetha</div>
-<div class="pub-card"><b>IoUT Vision System</b><br><span class="track">Communication</span><br>Student: Jahnava</div>
-<div class="pub-card"><b>ECG-based Person Identification</b><br><span class="track">IoT</span></div>
-<div class="pub-card"><b>Indoor Localization using TinyML</b><br><span class="track">IoT</span></div>
-<div class="pub-card"><b>LUMI: On-device LLM Framework</b><br><span class="track">Cyber Security</span></div>
-<div class="pub-card"><b>H-CGRU Net for Fetal Health</b><br><span class="track">Healthcare</span><br>Student: Sahaja</div>
-<div class="pub-card"><b>Plant Leaf Disease Recognition</b><br><span class="track">Environmental</span></div>
-<div class="pub-card"><b>Energy-Efficient TinyML Systems</b><br><span class="track">Computer Vision</span><br>Student: Nomitha</div>
+<div class="pub-card">
+<b>Medical Image Analysis using Federated Edge Learning with GANs (FEELGANs)</b><br>
+Application No: 202441083307<br>
+Inventors: Vennela, Siddartha, Usman, Charishma, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>A System for Detecting Retinal Diseases</b><br>
+Application No: 202441066371<br>
+Inventors: Md Muzakkir Hussain, Firoj Gazi<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>Air Quality Monitoring and Alert Generation using AI</b><br>
+Application No: 202541000511<br>
+Inventors: Ch Madhu Bhushan, Lakshmi Priya, A Surayya, Firoj Gazi, Md Muzakkir Hussain, Dinesh Reddy<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>Integrated Underwater Data Transmission and Object Detection using TinyML</b><br>
+Application No: 202541016043<br>
+Inventors: Sai Srihitha, Jahnava Sai, Ch Madhu Bhushan, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+<b>TinyML Test-bed for Real-Time Object Detection</b><br>
+Application No: 202541087210<br>
+Inventors: Lakshmi Priya, Ch Madhu Bhushan, Nomitha Prasanthi, Fazal Shaik, Hemanth, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Filed</span>
+</div>
 
 </div>
 </div>
@@ -230,6 +243,7 @@ Focused on real-world deployment, interdisciplinary research, and advanced commu
 <!-- JS -->
 <script>
 
+// Fade animation
 const faders = document.querySelectorAll('.fade');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -240,6 +254,7 @@ const observer = new IntersectionObserver(entries => {
 });
 faders.forEach(f => observer.observe(f));
 
+// Panel control
 function openPublications() {
     document.getElementById("pubPanel").classList.add("active");
 }
