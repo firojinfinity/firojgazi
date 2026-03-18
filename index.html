@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dr. Firoj Gazi</title>
+<title>Dr. Firoj Gazi | Research Profile</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -15,13 +15,13 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     display: flex;
-    background: #f9fafb;
+    background: #f8fafc;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 260px;
-    background: #111827;
+    width: 270px;
+    background: #0f172a;
     color: white;
     height: 100vh;
     position: fixed;
@@ -33,24 +33,14 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #2563eb;
+    border: 3px solid #3b82f6;
     margin-bottom: 10px;
 }
 
-.links a {
-    display: block;
-    margin: 8px 0;
-    color: #d1d5db;
-    text-decoration: none;
-}
-
-.links a:hover { color: white; }
-
 .nav a {
     display: block;
-    margin: 10px 0;
-    color: #9ca3af;
+    margin: 12px 0;
+    color: #cbd5f5;
     text-decoration: none;
 }
 
@@ -58,64 +48,31 @@ body {
 
 /* Main */
 .main {
-    margin-left: 260px;
+    margin-left: 270px;
     padding: 50px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 section { margin-bottom: 60px; }
 
 h2 {
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-ul { line-height: 1.8; }
-
-/* Publications Panel */
-#pubPanel {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background: #f9fafb;
-    transition: 0.5s;
-    z-index: 999;
-    overflow-y: auto;
-}
-
-#pubPanel.active { right: 0; }
-
-.pub-header {
-    background: #111827;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.pub-content {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
 }
 
 .pub-card {
     background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .badge {
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 12px;
     background: #dbeafe;
-    color: #1e40af;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
 }
 </style>
 </head>
@@ -128,11 +85,6 @@ ul { line-height: 1.8; }
 <h2>Dr. Firoj Gazi</h2>
 <p>IoT | IoUT | Edge AI | SDN</p>
 
-<div class="links">
-<a href="https://github.com/firojinfinity" target="_blank">GitHub</a>
-<a href="https://scholar.google.com/citations?user=Qs5HY2QAAAAJ" target="_blank">Google Scholar</a>
-</div>
-
 <div class="nav">
 <a href="#about">About</a>
 <a href="#research">Research</a>
@@ -140,39 +92,39 @@ ul { line-height: 1.8; }
 <a href="#projects">Projects</a>
 <a href="#funding">Funding</a>
 <a href="#skills">Skills</a>
-<a href="#" onclick="openPublications()">Research Output</a>
+<a href="#publications">Research Output</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 
-<!-- Main -->
 <div class="main">
 
 <section id="about">
 <h1>About</h1>
 <p>
-Dr. Firoj Gazi is an interdisciplinary researcher specializing in IoT, IoUT, and intelligent communication systems. 
-His work focuses on energy-efficient underwater networks, reinforcement learning-based protocols, and AI-driven solutions. 
-He actively develops scalable systems for real-world deployment in smart environments and resource-constrained networks.
+Dr. Firoj Gazi is a researcher specializing in Internet of Things (IoT), Internet of Underwater Things (IoUT), 
+and intelligent communication systems. His research focuses on energy-efficient underwater acoustic networks, 
+reinforcement learning-based protocol design, and AI-driven edge systems. He works on real-world deployments 
+in smart cities, healthcare AI, and resource-constrained environments.
 </p>
 </section>
 
 <section id="research">
 <h2>Research Interests</h2>
 <ul>
-<li>IoT & Smart Systems</li>
+<li>IoT and Smart Systems</li>
 <li>Internet of Underwater Things (IoUT)</li>
-<li>Underwater Acoustic Networks</li>
-<li>Reinforcement Learning-based MAC</li>
+<li>Underwater Acoustic Communication</li>
+<li>Reinforcement Learning-based MAC Protocols</li>
 <li>Software Defined Networking</li>
-<li>Edge AI & TinyML</li>
+<li>Edge AI and TinyML</li>
 </ul>
 </section>
 
 <section id="experience">
 <h2>Experience</h2>
 <ul>
-<li>Postdoctoral Researcher – University of Alberta</li>
+<li>Postdoctoral Researcher – University of Alberta (2022–2023)</li>
 <li>Associate Professor – UEM Jaipur</li>
 <li>JRF – IIT Kharagpur</li>
 <li>Project Assistant – Jadavpur University</li>
@@ -184,89 +136,103 @@ He actively develops scalable systems for real-world deployment in smart environ
 <section id="projects">
 <h2>Projects</h2>
 <ul>
-<li><b>Underwater Multimedia IoT Networks:</b> Acoustic communication systems</li>
-<li><b>RL-based MAC Protocol:</b> Intelligent channel optimization</li>
-<li><b>SDN-based Communication:</b> Centralized network control</li>
-<li><b>Smart City Monitoring:</b> Air quality & traffic sensing</li>
-<li><b>Pipeline Monitoring:</b> Leak detection systems</li>
+<li><b>Underwater Multimedia IoT Networks:</b> Multi-hop acoustic communication systems</li>
+<li><b>RL-based MAC Protocol Design:</b> Adaptive intelligent protocols</li>
+<li><b>SDN-based Underwater Communication:</b> Centralized routing control</li>
+<li><b>Smart City Monitoring:</b> Air quality & traffic sensing systems</li>
+<li><b>Pipeline Monitoring Systems:</b> IoT-based industrial monitoring</li>
 </ul>
 </section>
 
 <section id="funding">
-<h2>Seed Funding</h2>
+<h2>Seed Funding & Grants</h2>
 <ul>
-<li>Underwater IoT Communication Systems</li>
-<li>Edge AI Smart Monitoring</li>
-<li>AI-driven Healthcare Systems</li>
+<li>Edge AI Systems for Smart Monitoring</li>
+<li>Underwater IoT Communication Research</li>
+<li>AI-based Healthcare and Medical Imaging</li>
 </ul>
+<p><i>*Upload funding sanction file to include exact grant amounts & agencies*</i></p>
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
 <ul>
 <li><b>Programming:</b> C, Java, Python</li>
-<li><b>IoT:</b> Arduino, Raspberry Pi, NodeMCU</li>
+<li><b>IoT Platforms:</b> Arduino, Raspberry Pi, NodeMCU</li>
 <li><b>Simulation:</b> NS-2, NS-3</li>
-<li><b>AI/ML:</b> TensorFlow Lite, TinyML</li>
+<li><b>AI/ML:</b> TinyML, TensorFlow Lite, CNN, RNN</li>
 <li><b>Tools:</b> MATLAB, OpenCV, Scikit-learn</li>
 <li><b>Web:</b> HTML, CSS</li>
 </ul>
 </section>
 
+<section id="publications">
+<h2>Research Output</h2>
+
+<h3>Journal Papers</h3>
+
+<div class="pub-card">RL-based MAC Protocol – ACM TOSN (2022)</div>
+<div class="pub-card">ProStream – IEEE IoT Journal (2022)</div>
+<div class="pub-card">AquaStream – IEEE IoT Journal (2021)</div>
+<div class="pub-card">RE-MAC – IEEE Systems Journal (2022)</div>
+<div class="pub-card">Edge Server Placement – IEEE Access (2025)</div>
+<div class="pub-card">TinyML Edge AI – Scientific Reports (2025)</div>
+
+<h3>Patents</h3>
+
+<div class="pub-card">
+Smart Indoor Localization System<br>
+Application No: 202441067500 <span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+ATTENDEDGE Smart Attendance System<br>
+Application No: 202441077282 <span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+Medical Image Analysis using Federated Learning<br>
+Application No: 202441083307 <span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+Retinal Disease Detection System<br>
+Application No: 202441066371 <span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+AI-based Air Quality Monitoring<br>
+Application No: 202541000511 <span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+Underwater Data Transmission + TinyML<br>
+Application No: 202541016043 <span class="badge">Filed</span>
+</div>
+
+<div class="pub-card">
+TinyML Testbed System<br>
+Application No: 202541087210 <span class="badge">Filed</span>
+</div>
+
+<h3>Conference Papers</h3>
+
+<div class="pub-card">Smart City Air Quality – DCOSS (2017)</div>
+<div class="pub-card">AirSense – IEEE Sensors (2016)</div>
+<div class="pub-card">Traffic Control IoT – 2018</div>
+<div class="pub-card">Traffic Queue Detection – 2019</div>
+<div class="pub-card">UnRest – IEEE GLOBECOM (2020)</div>
+<div class="pub-card">Multiple IEEE FNWF & IE Papers – 2025</div>
+
+</section>
+
 <section id="contact">
 <h2>Contact</h2>
 <p>Email: firojgazi123@gmail.com</p>
+<p>Email: froj@ualberta.ca</p>
 </section>
 
 </div>
-
-<!-- Publications -->
-<div id="pubPanel">
-<div class="pub-header">
-<h1>Research Output</h1>
-<button onclick="closePublications()">✕</button>
-</div>
-
-<div class="pub-content">
-
-<h2>Patents</h2>
-
-<div class="pub-card">
-<b>Smart Indoor Localization System</b><br>
-Application No: 202441067500<br>
-<span class="badge">Filed</span>
-</div>
-
-<div class="pub-card">
-<b>ATTENDEDGE Smart Attendance System</b><br>
-Application No: 202441077282<br>
-<span class="badge">Filed</span>
-</div>
-
-<h2>Key Publications</h2>
-
-<div class="pub-card">
-<b>RL-based MAC Protocol</b><br>
-ACM TOSN, 2022
-</div>
-
-<div class="pub-card">
-<b>ProStream IoT Network</b><br>
-IEEE IoT Journal, 2022
-</div>
-
-</div>
-</div>
-
-<script>
-function openPublications() {
-document.getElementById("pubPanel").classList.add("active");
-}
-
-function closePublications() {
-document.getElementById("pubPanel").classList.remove("active");
-}
-</script>
 
 </body>
 </html>
