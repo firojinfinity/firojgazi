@@ -85,6 +85,40 @@ video {
     border-radius: 5px;
     font-size: 12px;
 }
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    padding: 10px;
+    font-size: 14px;
+    color: #374151;
+    text-align: center;
+}
+    
 </style>
 </head>
 
@@ -467,6 +501,45 @@ SRM University AP
 <b>Early Career Researcher Recognition</b><br>
 For contributions in IoT and Underwater Communication Systems
 </div>
+
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="img1.jpg" alt="Conference Presentation IE2025">
+<div class="gallery-caption">IE 2025 Presentation – Germany</div>
+</div>
+
+<div class="gallery-item">
+<img src="img2.jpg" alt="Best Paper Award Ceremony">
+<div class="gallery-caption">Best Full Paper Award Ceremony</div>
+</div>
+
+<div class="gallery-item">
+<img src="img3.jpg" alt="Research Lab Work">
+<div class="gallery-caption">EdgeAI Lab Research Work</div>
+</div>
+
+<div class="gallery-item">
+<img src="img4.jpg" alt="Student Interaction">
+<div class="gallery-caption">Student Mentorship Session</div>
+</div>
+
+<div class="gallery-item">
+<img src="img5.jpg" alt="Project Demonstration">
+<div class="gallery-caption">IoT Project Demonstration</div>
+</div>
+
+<div class="gallery-item">
+<img src="img6.jpg" alt="Conference Networking">
+<div class="gallery-caption">Networking with Researchers</div>
+</div>
+
+</div>
+
+</section>
     
 <section id="contact">
 <h2>Contact</h2>
@@ -474,6 +547,8 @@ For contributions in IoT and Underwater Communication Systems
 <p>Email: froj@ualberta.ca</p>
 </section>
 
+
+    
 </div>
 
 </body>
