@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dr. Firoj Gazi</title>
+<title>Dr. Firoj Gazi | Research Profile</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -15,58 +15,32 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     display: flex;
-    background: #f9fafb;
+    background: #f8fafc;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 260px;
-    background: #111827;
+    width: 270px;
+    background: #0f172a;
     color: white;
     height: 100vh;
     position: fixed;
     padding: 20px;
     text-align: center;
-    animation: slideIn 1s ease;
-}
-
-@keyframes slideIn {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
 }
 
 .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #2563eb;
+    border: 3px solid #3b82f6;
     margin-bottom: 10px;
-    transition: 0.3s;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(37,99,235,0.6);
-}
-
-.links a {
-    display: block;
-    margin: 8px 0;
-    color: #d1d5db;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.links a:hover {
-    color: white;
-    transform: translateX(5px);
 }
 
 .nav a {
     display: block;
-    margin: 10px 0;
-    color: #9ca3af;
+    margin: 12px 0;
+    color: #cbd5f5;
     text-decoration: none;
 }
 
@@ -74,116 +48,42 @@ body {
 
 /* Main */
 .main {
-    margin-left: 260px;
+    margin-left: 270px;
     padding: 50px;
-    max-width: 900px;
+    max-width: 1000px;
 }
 
-section {
-    margin-bottom: 60px;
-    transition: 0.3s;
-}
-
-section:hover { transform: translateY(-3px); }
-
-h1 { font-size: 30px; }
+section { margin-bottom: 60px; }
 
 h2 {
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 5px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
 }
 
-ul { line-height: 1.8; }
-
-/* Fade animation */
-.fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Publications Panel */
-#pubPanel {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background: #f9fafb;
-    transition: 0.5s;
-    z-index: 999;
-    overflow-y: auto;
-}
-
-#pubPanel.active {
-    right: 0;
-}
-
-.pub-header {
-    background: #111827;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.pub-header button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
-}
-
-.pub-content {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px;
-}
-
+/* Cards */
 .pub-card {
     background: white;
-    padding: 20px;
-    margin-bottom: 15px;
+    padding: 18px;
+    margin: 15px 0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: 0.3s;
 }
 
-.pub-card:hover {
-    transform: translateY(-5px);
+/* Video */
+video {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 12px auto;
+    border-radius: 12px;
 }
-
-.pub-card a {
-    color: #2563eb;
-    text-decoration: none;
-}
-
-/* Badges */
+/* Badge */
 .badge {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 12px;
-    margin-top: 6px;
     background: #dbeafe;
-    color: #1e40af;
-}
-
-.track {
-    display: inline-block;
-    margin-top: 6px;
     padding: 3px 8px;
-    font-size: 12px;
     border-radius: 5px;
-    background: #e0f2fe;
-    color: #0369a1;
+    font-size: 12px;
 }
 </style>
 </head>
@@ -192,123 +92,204 @@ ul { line-height: 1.8; }
 
 <!-- Sidebar -->
 <div class="sidebar">
-    <img src="profile.jpg" class="profile-img">
+<img src="profile.jpg" class="profile-img">
+<h2>Dr. Firoj Gazi</h2>
+<p>IoT | IoUT | Edge AI | SDN</p>
 
-    <h2>Dr. Firoj Gazi</h2>
-    <p>IoT | IoUT | Edge AI | SDN</p>
-
-    <div class="links">
-        <a href="https://github.com/firojinfinity" target="_blank">GitHub</a>
-        <a href="https://scholar.google.com/citations?user=Qs5HY2QAAAAJ" target="_blank">Google Scholar</a>
-        <a href="https://thingspeak.com/channels/299088/" target="_blank">ThingSpeak</a>
-    </div>
-
-    <div class="nav">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#" onclick="openPublications()">Research Output</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </div>
+<div class="nav">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#funding">Funding</a>
+<a href="#skills">Skills</a>
+<a href="#publications">Research Output</a>
+<a href="#contact">Contact</a>
+</div>
 </div>
 
 <!-- Main -->
 <div class="main">
 
-<section id="about" class="fade">
+<section id="about">
 <h1>About</h1>
 <p>
-Dr. Firoj Gazi is an interdisciplinary researcher and academician with expertise spanning 
-Internet of Things (IoT), Internet of Underwater Things (IoUT), and intelligent communication systems. 
-His work focuses on designing energy-efficient, reliable, and scalable solutions for underwater acoustic networks 
-and next-generation IoT ecosystems. 
-
-His research integrates advanced techniques such as reinforcement learning, edge intelligence, and 
-software-defined networking to address real-world challenges in communication, environmental monitoring, 
-and smart systems. He is actively involved in developing innovative AI-driven solutions with practical 
-deployments in resource-constrained environments.
+Dr. Firoj Gazi is an interdisciplinary researcher specializing in Internet of Things (IoT), 
+Internet of Underwater Things (IoUT), and intelligent communication systems. His research focuses 
+on energy-efficient underwater acoustic networks, reinforcement learning-based MAC protocols, 
+and AI-driven edge systems for real-world deployments in smart environments.
 </p>
 </section>
 
-<section id="research" class="fade">
+<section id="research">
 <h2>Research Interests</h2>
 <ul>
 <li>IoT and Smart Systems</li>
 <li>Internet of Underwater Things (IoUT)</li>
 <li>Underwater Acoustic Networks</li>
-<li>Reinforcement Learning-based MAC</li>
+<li>Reinforcement Learning-based MAC Protocols</li>
 <li>Software Defined Networking (SDN)</li>
-<li>Edge AI Systems</li>
+<li>Edge AI and TinyML</li>
 </ul>
 </section>
 
-<section id="experience" class="fade">
+<section id="experience">
 <h2>Professional Experience</h2>
 <ul>
-<li><b>Postdoctoral Researcher</b> – University of Alberta (2022–2023)</li>
-<li><b>Associate Professor</b> – UEM Jaipur (2022)</li>
-<li><b>JRF</b> – IIT Kharagpur (2018–2020)</li>
-<li><b>Project Assistant</b> – Jadavpur University (2015–2018)</li>
-<li><b>Assistant Professor</b> – GECR Jharkhand (2018)</li>
-<li><b>RF Engineer</b> – ZTE Telecom (2014–2015)</li>
+<li>Postdoctoral Researcher – University of Alberta (2022–2023)</li>
+<li>Associate Professor – UEM Jaipur</li>
+<li>JRF – IIT Kharagpur</li>
+<li>Project Assistant – Jadavpur University</li>
+<li>Assistant Professor – GECR Jharkhand</li>
+<li>RF Engineer – ZTE Telecom</li>
 </ul>
 </section>
 
-<section id="projects" class="fade">
+<!-- PROJECTS -->
+<section id="projects">
 <h2>Projects</h2>
-<ul>
-<li>Underwater Multimedia IoT Networks</li>
-<li>RL-based MAC Protocol Design</li>
-<li>SDN-based Underwater Communication</li>
-<li>IoT Smart City Monitoring</li>
-<li>Pipeline Monitoring Systems</li>
-</ul>
+
+<div class="pub-card">
+<b>Underwater Multimedia IoT Networks</b>
+<p>Development of multi-hop underwater acoustic communication systems.</p>
+
+<video controls preload="metadata">
+<source src="./1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="pub-card">
+<b>Reinforcement Learning-based MAC Protocol Design</b>
+<p>Adaptive MAC protocols using reinforcement learning for efficient communication.</p>
+
+<video controls preload="metadata">
+<source src="./2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="pub-card">
+<b>SDN-based Underwater Communication</b>
+<p>Centralized control and dynamic routing using SDN.</p>
+</div>
+
+<div class="pub-card">
+<b>IoT Smart City Monitoring</b>
+<p>Air quality and traffic monitoring using IoT and crowd sensing.</p>
+</div>
+
+<div class="pub-card">
+<b>Pipeline Monitoring Systems</b>
+<p>IoT-based industrial monitoring and leak detection.</p>
+</div>
+
 </section>
 
-<section id="skills" class="fade">
+<!-- FUNDING -->
+<section id="funding">
+<h2>Seed Funding & Research Grants</h2>
+
+<div class="pub-card">
+<b>Using Edge Intelligence for Resource Allocation in UAV-IoT Network</b><br><br>
+
+<b>Principal Investigator (PI):</b><br>
+Dr. Md Muzakkir Hussain<br><br>
+
+<b>Co-Principal Investigator (Co-PI):</b><br>
+Dr. Firoj Gazi<br><br>
+
+<b>Equipment & Resources:</b><br>
+Equipment and consumables (List Attached)<br><br>
+
+<b>Recommended Funding:</b><br>
+₹ 14,50,000
+</div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
 <h2>Skills</h2>
+
 <ul>
-<li><b>Programming:</b> C, Java, Python</li>
 
-<li><b>Embedded & IoT Platforms:</b> Arduino, Raspberry Pi, NodeMCU, ESP8266/ESP32</li>
+<li><b>Programming & Development:</b> C, Java, Python, Embedded C</li>
 
-<li><b>Networking & Simulation:</b> NS-2, NS-3, Underwater Acoustic Network Simulation, SDN Concepts</li>
+<li><b>IoT & Embedded Systems:</b> Arduino, Raspberry Pi, NodeMCU, ESP8266/ESP32</li>
 
-<li><b>AI/ML & Edge AI:</b> TensorFlow Lite, TinyML, CNN, RNN, GRU, Federated Learning, GANs, Model Optimization</li>
+<li><b>Networking:</b> IoT, IoUT, WSN, Underwater Networks, SDN</li>
 
-<li><b>Signal & Biomedical Processing:</b> ECG Signal Processing, Medical Image Analysis</li>
+<li><b>Simulation:</b> NS-2, NS-3, MATLAB</li>
 
-<li><b>Communication Systems:</b> IoT, IoUT, Wireless Sensor Networks (WSN), Multi-hop Communication</li>
+<li><b>AI/ML & Edge AI:</b> TinyML, TensorFlow Lite, CNN, RNN, GANs, Federated Learning</li>
 
-<li><b>Data & Tools:</b> MATLAB, Python Libraries (NumPy, Pandas, OpenCV, Scikit-learn)</li>
+<li><b>Signal & Image Processing:</b> ECG, Medical Imaging, OpenCV</li>
 
-<li><b>Web & Interface Development:</b> HTML, CSS, Basic JavaScript</li>
+<li><b>Data Science:</b> NumPy, Pandas, Scikit-learn</li>
 
-<li><b>Systems & Hardware Integration:</b> Sensor Integration, Real-time Data Acquisition, Edge Deployment</li>
+<li><b>Systems:</b> Edge Deployment, Real-time Systems</li>
+
+<li><b>Web:</b> HTML, CSS, Basic JavaScript</li>
+
 </ul>
+
 </section>
 
-<section id="contact" class="fade">
-<h2>Contact</h2>
-<p>Email: firojgazi123@gmail.com</p>
-<p>froj@ualberta.ca</p>
-</section>
+<!-- PUBLICATIONS -->
+<section id="publications">
+<h2>Research Output</h2>
 
+<h3>Patents</h3>
+
+<div class="pub-card">
+<b>A System for Smart Indoor Localization and the Method Thereof</b><br>
+Application No: 202441067500<br>
+<b>Members:</b> Meka Naga Nandini Devi, Ch Madhu Bhushan, Hemanth Durga Kumar Siripalli, Fazal Shaik Shaik, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Published</span>
 </div>
 
-<!-- Publications Panel -->
-<div id="pubPanel">
-
-<div class="pub-header">
-    <h1>Research Output</h1>
-    <button onclick="closePublications()">✕</button>
+<div class="pub-card">
+<b>ATTENDEDGE: An EdgeAI-based Smart Attendance System using 3D Object Detection</b><br>
+Application No: 202441077282<br>
+<b>Members:</b> Fazal Shaik Shaik, Meka Naga Nandini Devi, Ch Madhu Bhushan, A Surayya, Lakshmi Priya Koppuravuri, Abus Sami, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Published</span>
 </div>
 
-<div class="pub-content">
+<div class="pub-card">
+<b>System and Method for Medical Image Analysis using Federated Edge Learning with GANs (FEELGANs)</b><br>
+Application No: 202441083307<br>
+<b>Members:</b> Vennela, Siddartha, Usman, Charishma, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Published</span>
+</div>
 
-<h2>Journal Articles</h2>
+<div class="pub-card">
+<b>A System for Detecting Retinal Diseases</b><br>
+Application No: 202441066371<br>
+<b>Members:</b> Md Muzakkir Hussain, Firoj Gazi<br>
+<span class="badge">Published</span>
+</div>
+
+<div class="pub-card">
+<b>System and Method for Air Quality Monitoring and Alert Generation using Artificial Intelligence</b><br>
+Application No: 202541000511<br>
+<b>Members:</b> Ch Madhu Bhushan, Lakshmi Priya Koppuravuri, A Surayya, Firoj Gazi, Md Muzakkir Hussain, Dinesh Reddy<br>
+<span class="badge">Published</span>
+</div>
+
+<div class="pub-card">
+<b>Integrated Underwater Data Transmission and Object Detection System using TinyML and Multi-Hop Networks</b><br>
+Application No: 202541016043<br>
+<b>Members:</b> Sai Srihitha Polapragada, Jahnava Sai Garikipati, Ch Madhu Bhushan, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Published</span>
+</div>
+
+<div class="pub-card">
+<b>A TinyML Test-bed for Real-Time Object Detection in Resource-Constrained Environments</b><br>
+Application No: 202541087210<br>
+<b>Members:</b> Lakshmi Priya Koppuravuri, Ch Madhu Bhushan, Nomitha Prasanthi Bisirangi, Fazal Shaik, Hemanth Durga Kumar Siripalli, Firoj Gazi, Md Muzakkir Hussain<br>
+<span class="badge">Published</span>
+</div>
+
+<h3>Journal Articles</h3>
 
 <div class="pub-card">
 <b>Reinforcement Learning-based MAC Protocol for Underwater Multimedia Sensor Networks</b><br>
@@ -340,164 +321,128 @@ IEEE Access, 2025
 Scientific Reports, 2025
 </div>
 
----
-<h2>Patents</h2>
+<!-- CONFERENCES -->
+<h3>Conference Papers</h3>
 
 <div class="pub-card">
-<b>A System for Smart Indoor Localization and the Method Thereof</b><br>
-Application No: 202441067500<br>
-<span class="badge">Filed</span>
+<b>Towards Smart City: Sensing Air Quality in City Based on Opportunistic Crowd-Sensing</b><br>
+J. Dutta, C. Chowdhury, S. Roy, A.I. Middya, <b>F. Gazi</b><br>
+Proceedings of the International Conference on Distributed Computing Systems (DCOSS), 2017
 </div>
 
 <div class="pub-card">
-<b>ATTENDEDGE: EdgeAI-based Smart Attendance System using 3D Object Detection</b><br>
-Application No: 202441077282<br>
-<span class="badge">Filed</span>
+<b>AirSense: Opportunistic Crowd-Sensing based Air Quality Monitoring System for Smart City</b><br>
+J. Dutta, <b>F. Gazi</b>, S. Roy, C. Chowdhury<br>
+IEEE Sensors Conference, 2016
 </div>
 
 <div class="pub-card">
-<b>Medical Image Analysis using Federated Edge Learning with GANs (FEELGANs)</b><br>
-Application No: 202441083307<br>
-<span class="badge">Filed</span>
+<b>An IoT-based Intelligent Traffic Congestion Control System for Road Crossings</b><br>
+P. Sadhukhan, <b>F. Gazi</b><br>
+International Conference on Communication, Computing and Internet of Things, 2018
 </div>
 
 <div class="pub-card">
-<b>System for Detecting Retinal Diseases</b><br>
-Application No: 202441066371<br>
-<span class="badge">Filed</span>
+<b>Measuring Real-Time Road Traffic Queue Length: A Reliable Approach using Ultrasonic Sensor</b><br>
+A. Mandal, P. Sadhukhan, <b>F. Gazi</b>, P. Sharma<br>
+International Conference on Communication, Devices and Computing (ICCDC), 2019
 </div>
 
 <div class="pub-card">
-<b>AI-based Air Quality Monitoring and Alert System</b><br>
-Application No: 202541000511<br>
-<span class="badge">Filed</span>
+<b>UnRest: Underwater Reliable Acoustic Communication for Multimedia Streaming</b><br>
+<b>F. Gazi</b>, S. Misra, N. Ahmed, A. Mukherjee, N. Kumar<br>
+IEEE Global Communications Conference (GLOBECOM), 2020
 </div>
 
 <div class="pub-card">
-<b>Integrated Underwater Data Transmission & Object Detection using TinyML</b><br>
-Application No: 202541016043<br>
-<span class="badge">Filed</span>
+<b>Design and Fabrication of an IoT-based Air Purifier using HEPA Filter</b><br>
+A. Choudhary, L. Saini, A. Ahmad, H. Banerjee, <b>F. Gazi</b><br>
+International Conference on Internet of Everything, 2023
 </div>
 
 <div class="pub-card">
-<b>TinyML Test-bed for Real-Time Object Detection in Resource-Constrained Environments</b><br>
-Application No: 202541087210<br>
-<span class="badge">Filed</span>
-</div>
-<h2>Conference Papers</h2>
-
-<div class="pub-card">
-<b>Towards Smart City: Air Quality Monitoring using Crowd-Sensing</b><br>
-DCOSS Conference, 2017
+<b>Integrated Underwater Data Transmission and Object Detection System using TinyML and Multi-Hop Networks</b><br>
+C.M. Bhushan, S.H. Laskar, J.S. Garikapati, P.S. Srihitha, H.D.K. Kumar, <b>F. Gazi</b>, M.M. Hussain<br>
+International Conference on Intelligent Environments (IE), 2025
 </div>
 
 <div class="pub-card">
-<b>AirSense: Opportunistic Crowd-Sensing for Air Quality Monitoring</b><br>
-IEEE Sensors, 2016
+<b>Dependency-Aware Microservice Placement in Dynamic Vehicular Edge Computing</b><br>
+A. Surayya, M.M. Hussain, <b>F. Gazi</b>, H.D.K. Kumar<br>
+IEEE Future Networks World Forum (FNWF), 2025
 </div>
 
 <div class="pub-card">
-<b>IoT-based Traffic Congestion Control System</b><br>
-IC3IoT, 2018
+<b>A UAV-Assisted Architecture for Fault-Tolerant LoRa-Based V2I Communication</b><br>
+H.D.K. Siripalli, F. Shaik, M.N.N. Devi, C.M. Bhushan, <b>F. Gazi</b>, M.M. Hussain<br>
+IEEE Future Networks World Forum (FNWF), 2025
 </div>
 
 <div class="pub-card">
-<b>Measuring Real-Time Traffic Queue using Ultrasonic Sensors</b><br>
-ICCDC, 2019
+<b>Towards Efficient IoUT Vision: Simulated Compressed Image Transmission and Detection</b><br>
+J.S. Garikapati, C.M. Bhushan, <b>F. Gazi</b>, M.M. Hussain<br>
+IEEE Future Networks World Forum (FNWF), 2025
 </div>
 
 <div class="pub-card">
-<b>UnRest: Underwater Reliable Acoustic Communication</b><br>
-IEEE GLOBECOM, 2020
+<b>Leveraging Edge Resources for Indoor Localization for Improved Accuracy</b><br>
+M.N.N. Devi, S.H. Laskar, <b>F. Gazi</b>, M.M. Hussain<br>
+International Conference on Intelligent Environments (IE), 2025
 </div>
 
 <div class="pub-card">
-<b>Integrated Underwater Data Transmission using TinyML</b><br>
-IEEE IE Conference, 2025
+<b>Transparent Intrusion Detection Using ML: Integrating Explainable Models for Cybersecurity</b><br>
+M. Abdussami et al., <b>F. Gazi</b><br>
+IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC), 2025
 </div>
 
 <div class="pub-card">
-<b>Dependency-Aware Microservice Placement in Vehicular Edge Computing</b><br>
-IEEE FNWF, 2025
+<b>ConFi: A Confidence-Aware Framework for Ultra-Precise Indoor Localization in 6G Networks</b><br>
+M.N.N. Devi, C.M. Bhushan, H.D.K. Kumar, <b>F. Gazi</b>, M.M. Hussain<br>
+IEEE PIMRC, 2025
 </div>
 
 <div class="pub-card">
-<b>UAV-Assisted LoRa-based V2I Communication</b><br>
-IEEE FNWF, 2025
+<b>A Blockchain-based DDoS Attack Mitigation Framework for Mission-Critical IIoT Environments</b><br>
+A.D. Aguru et al., <b>F. Gazi</b><br>
+IEEE PIMRC, 2025
 </div>
 
 <div class="pub-card">
-<b>Efficient IoUT Vision: Compressed Image Transmission</b><br>
-IEEE FNWF, 2025
+<b>Toward Efficient Deployment of Compressed Neural Networks on MCU for EdgeAI Applications</b><br>
+Q. Li, A. Al Omar, <b>F. Gazi</b>, M.M. Hussain, C.M. Bhushan<br>
+International Conference on Mathematics and Computing (ICMC), 2025
 </div>
 
 <div class="pub-card">
-<b>Indoor Localization using Edge Intelligence</b><br>
-IEEE IE, 2025
+<b>ProTSF: IoT-Based Outdoor Air Pollution Forecasting Using Bayesian Optimization-Based LSTM</b><br>
+J. Dutta, C.M. Bhushan, <b>F. Gazi</b>, M.M. Hussain<br>
+International Conference on Mathematics and Computing (ICMC), 2025
 </div>
 
----
+<div class="pub-card">
+<b>Facility Location in 6G-aware Vehicular Edge Computing</b><br>
+A. Surayya, C.M. Bhushan, <b>F. Gazi</b>, M.M. Hussain<br>
+IEEE International Conference on Advanced Networks, 2024
+</div>
 
-<h2>Book Chapters</h2>
+<!-- BOOK CHAPTER -->
+<h3>Book Chapters</h3>
 
 <div class="pub-card">
-<b>Deep Learning Model for OCT Image Classification</b><br>
+<b>Deep Learning Model for OCT Image Classification for Central Serous Chorioretinopathy</b><br>
 Transformative Technologies in Healthcare, 2025
 </div>
 
----
+</section>
 
-<h2>Recent Advanced Research (2024–2025)</h2>
-
-<div class="pub-card">
-<b>Transparent Intrusion Detection using Explainable ML</b><br>
-IEEE PIMRC, 2025
-</div>
-
-<div class="pub-card">
-<b>Confidence-Aware Indoor Localization in 6G Networks</b><br>
-IEEE PIMRC, 2025
-</div>
-
-<div class="pub-card">
-<b>Blockchain-based DDoS Mitigation for IIoT</b><br>
-IEEE PIMRC, 2025
-</div>
-
-<div class="pub-card">
-<b>Compressed Neural Network Deployment on MCU</b><br>
-ICMC, 2025
-</div>
-
-<div class="pub-card">
-<b>IoT-based Air Pollution Forecasting using LSTM</b><br>
-ICMC, 2025
-</div>
-
-<div class="pub-card">
-<b>6G-aware Vehicular Edge Computing Facility Location</b><br>
-IEEE Conference, 2024
-</div>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: firojgazi123@gmail.com</p>
+<p>Email: froj@ualberta.ca</p>
+</section>
 
 </div>
-
-<script>
-const faders = document.querySelectorAll('.fade');
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) entry.target.classList.add('show');
-});
-});
-faders.forEach(f => observer.observe(f));
-
-function openPublications() {
-document.getElementById("pubPanel").classList.add("active");
-}
-
-function closePublications() {
-document.getElementById("pubPanel").classList.remove("active");
-}
-</script>
 
 </body>
-</html>; update on this 
+</html>; provide me whole code only updating awards sections nothing else
